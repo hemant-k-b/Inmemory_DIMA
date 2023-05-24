@@ -1,0 +1,1324 @@
+
+// Library name: And_Sram
+// Cell name: sram_and
+// View name: schematic
+subckt sram_and VDD VSS input1 input2 out pmos_clk pmos_clk2
+    M4 (out out1 VSS VSS) nch_mac l=180.0n w=600n multi=1 nf=1 sd=120.0n \
+        ad=5.7e-14 as=5.7e-14 pd=1.39u ps=1.39u nrd=2.576626 nrs=2.576626 \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+    M2 (net1 input2 VSS VSS) nch_mac l=30n w=200n multi=1 nf=2 sd=100n \
+        ad=1e-14 as=1.5e-14 pd=400n ps=700n sa=75n sb=75n sa1=75n sa2=75n \
+        sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M1 (out1 input1 net1 net1) nch_mac l=30n w=200n multi=1 nf=2 sd=100n \
+        ad=1e-14 as=1.5e-14 pd=400n ps=700n sa=75n sb=75n sa1=75n sa2=75n \
+        sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M6 (net2 out1 VDD VDD) pch_mac l=180.0n w=600n multi=2 nf=1 sd=120.0n \
+        ad=5.7e-14 as=5.7e-14 pd=1.39u ps=1.39u sa=75n sb=75n sa1=75n \
+        sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M5 (out1 pmos_clk2 VDD VDD) pch_mac l=30n w=500n multi=1 nf=5 sd=100n \
+        ad=2.75e-14 as=2.75e-14 pd=1.15u ps=1.15u sa=75n sb=75n sa1=75n \
+        sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M3 (out out1 net2 net2) pch_mac l=180.0n w=600n multi=2 nf=1 sd=120.0n \
+        ad=5.7e-14 as=5.7e-14 pd=1.39u ps=1.39u sa=75n sb=75n sa1=75n \
+        sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M0 (out1 pmos_clk VDD VDD) pch_mac l=30n w=500n multi=1 nf=5 sd=100n \
+        ad=2.75e-14 as=2.75e-14 pd=1.15u ps=1.15u sa=75n sb=75n sa1=75n \
+        sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+ends sram_and
+// End of subcircuit definition.
+
+// Library name: And_Sram
+// Cell name: SRAM_28nm
+// View name: schematic
+subckt SRAM_28nm BL BLB Q QB VDD VSS WL
+    M1 (Q QB VDD VDD) pch_mac l=30n w=100n multi=1 nf=1 sd=100n ad=7.5e-15 \
+        as=7.5e-15 pd=350n ps=350n nrd=1.466664 nrs=1.466664 sa=75n sb=75n \
+        sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n \
+        spa1=100n spa2=100n spa3=100n sap=91.9776n sapb=114.444n \
+        spba=115.715168n spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 \
+        spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 \
+        spomb1=1.11111e+60
+    M0 (QB Q VDD VDD) pch_mac l=30n w=100n multi=1 nf=1 sd=100n ad=7.5e-15 \
+        as=7.5e-15 pd=350n ps=350n nrd=1.466664 nrs=1.466664 sa=75n sb=75n \
+        sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n \
+        spa1=100n spa2=100n spa3=100n sap=91.9776n sapb=114.444n \
+        spba=115.715168n spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 \
+        spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 \
+        spomb1=1.11111e+60
+    M5 (Q WL BL BL) nch_mac l=30n w=100n multi=2 nf=1 sd=100n ad=7.5e-15 \
+        as=7.5e-15 pd=350.0n ps=350.0n nrd=2.576626 nrs=2.576626 sa=75n \
+        sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n \
+        spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n sapb=114.444n \
+        spba=115.715168n spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 \
+        spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 \
+        spomb1=1.11111e+60
+    M3 (Q QB VSS VSS) nch_mac l=30n w=400n multi=1 nf=4 sd=100n ad=2e-14 \
+        as=2.5e-14 pd=800n ps=1.1u nrd=2.576626 nrs=2.576626 sa=75n sb=75n \
+        sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n \
+        spa1=100n spa2=100n spa3=100n sap=91.9776n sapb=114.444n \
+        spba=115.715168n spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 \
+        spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 \
+        spomb1=1.11111e+60
+    M4 (QB WL BLB BLB) nch_mac l=30n w=100n multi=2 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=2.576626 \
+        nrs=2.576626 sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n \
+        sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M2 (QB Q VSS VSS) nch_mac l=30n w=400n multi=1 nf=4 sd=100n ad=2e-14 \
+        as=2.5e-14 pd=800n ps=1.1u nrd=2.576626 nrs=2.576626 sa=75n sb=75n \
+        sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n \
+        spa1=100n spa2=100n spa3=100n sap=91.9776n sapb=114.444n \
+        spba=115.715168n spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 \
+        spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 \
+        spomb1=1.11111e+60
+ends SRAM_28nm
+// End of subcircuit definition.
+
+// Library name: And_Sram
+// Cell name: And_bitcell
+// View name: schematic
+subckt And_bitcell BL BLB VDD VSS WL _net0 out pmos_clk
+    I0 (VDD VSS Q _net0 out pmos_clk _net0) sram_and
+    I1 (BL BLB Q QB VDD VSS WL) SRAM_28nm
+ends And_bitcell
+// End of subcircuit definition.
+
+// Library name: And_Sram
+// Cell name: switch
+// View name: schematic
+subckt switch control control_bar in out
+parameters mul_switch=10
+    M9 (intermediate control in in) nch_mac l=30n w=100n multi=mul_switch \
+        nf=1 sd=100n ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n sa=75n \
+        sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n \
+        spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n sapb=114.444n \
+        spba=115.715168n spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 \
+        spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 \
+        spomb1=1.11111e+60
+    M10 (out control intermediate intermediate) nch_mac l=30n w=100n \
+        multi=mul_switch nf=1 sd=100n ad=7.5e-15 as=7.5e-15 pd=350.0n \
+        ps=350.0n sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n \
+        sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M0 (in control_bar net3 net3) pch_mac l=30n w=100n multi=mul_switch \
+        nf=1 sd=100n ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n sa=75n \
+        sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n \
+        spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n sapb=114.444n \
+        spba=115.715168n spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 \
+        spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 \
+        spomb1=1.11111e+60
+    M4 (net3 control_bar out out) pch_mac l=30n w=100n multi=mul_switch \
+        nf=1 sd=100n ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n sa=75n \
+        sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n \
+        spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n sapb=114.444n \
+        spba=115.715168n spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 \
+        spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 \
+        spomb1=1.11111e+60
+    C4 (intermediate 0) capacitor c=1f
+    C3 (net3 0) capacitor c=1f
+ends switch
+// End of subcircuit definition.
+
+// Library name: And_Sram
+// Cell name: inverter
+// View name: schematic
+subckt inverter IN OUT VDD VSS
+    M0 (OUT IN VSS VSS) nch_mac l=30n w=100n multi=1 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350n ps=350n nrd=2.576626 nrs=2.576626 \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+    M1 (OUT IN VDD VDD) pch_mac l=30n w=100n multi=2 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=1.466664 \
+        nrs=1.466664 sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n \
+        sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+ends inverter
+// End of subcircuit definition.
+
+// Library name: And_Sram
+// Cell name: strong_arm_latch3
+// View name: schematic
+subckt strong_arm_latch3 clk gnd vx_final vdd vminus vplus
+    I7 (net5 vy vdd gnd) inverter
+    I9 (net4 vx vdd gnd) inverter
+    M6 (vy_final vy gnd gnd) nch_mac l=30n w=100n multi=1 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350n ps=350n nrd=2.576626 nrs=2.576626 \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+    M3 (vx_final vx gnd gnd) nch_mac l=30n w=100n multi=1 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350n ps=350n nrd=2.576626 nrs=2.576626 \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+    M1 (net4 net5 net7 gnd) nch_mac l=30n w=100n multi=1 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=0.142857 \
+        nrs=0.142857 sa=175.00n sb=175.00n sa1=75n sa2=75n sa3=75n sa4=75n \
+        sb1=75n sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M0 (net5 net4 net6 gnd) nch_mac l=30n w=100n multi=1 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=0.142857 \
+        nrs=0.142857 sa=175.00n sb=175.00n sa1=75n sa2=75n sa3=75n sa4=75n \
+        sb1=75n sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M8 (net7 vminus net1 gnd) nch_mac l=30n w=100n multi=1 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=0.142857 \
+        nrs=0.142857 sa=175.00n sb=175.00n sa1=75n sa2=75n sa3=75n sa4=75n \
+        sb1=75n sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M7 (net1 clk gnd gnd) nch_mac l=30n w=100n multi=1 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=0.142857 \
+        nrs=0.142857 sa=175.00n sb=175.00n sa1=75n sa2=75n sa3=75n sa4=75n \
+        sb1=75n sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M17 (net6 vplus net1 gnd) nch_mac l=30n w=100n multi=1 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=0.142857 \
+        nrs=0.142857 sa=175.00n sb=175.00n sa1=75n sa2=75n sa3=75n sa4=75n \
+        sb1=75n sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M15 (net1 vminus net6 vdd) pch_mac l=30n w=100n multi=2 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=0.1 nrs=0.1 \
+        sa=175.00n sb=175.00n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n \
+        sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M12 (net6 clk vdd vdd) pch_mac l=30n w=100n multi=1 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=0.1 nrs=0.1 \
+        sa=175.00n sb=175.00n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n \
+        sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M11 (net5 clk vdd vdd) pch_mac l=30n w=100n multi=1 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=0.1 nrs=0.1 \
+        sa=175.00n sb=175.00n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n \
+        sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M4 (net4 clk vdd vdd) pch_mac l=30n w=100n multi=1 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=0.1 nrs=0.1 \
+        sa=175.00n sb=175.00n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n \
+        sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M10 (net5 net4 vdd vdd) pch_mac l=30n w=100n multi=2 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=0.1 nrs=0.1 \
+        sa=175.00n sb=175.00n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n \
+        sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M5 (net4 net5 vdd vdd) pch_mac l=30n w=100n multi=2 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=0.1 nrs=0.1 \
+        sa=175.00n sb=175.00n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n \
+        sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    r (net7 clk vdd vdd) pch_mac l=30n w=100n multi=1 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=0.1 nrs=0.1 \
+        sa=175.00n sb=175.00n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n \
+        sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M16 (net1 vplus net7 vdd) pch_mac l=30n w=100n multi=2 nf=1 sd=100n \
+        ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n nrd=0.1 nrs=0.1 \
+        sa=175.00n sb=175.00n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n \
+        sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M13 (vx_final vy_final vdd vdd) pch_mac l=30n w=100n multi=1 nf=1 \
+        sd=100n ad=7.5e-15 as=7.5e-15 pd=350n ps=350n nrd=1.466664 \
+        nrs=1.466664 sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n \
+        sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M14 (vy_final vx_final vdd vdd) pch_mac l=30n w=100n multi=1 nf=1 \
+        sd=100n ad=7.5e-15 as=7.5e-15 pd=350n ps=350n nrd=1.466664 \
+        nrs=1.466664 sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n \
+        sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+ends strong_arm_latch3
+// End of subcircuit definition.
+
+// Library name: SAR_adc8_control
+// Cell name: Control_logic
+// View name: schematic
+subckt Control_logic clk Comparator_out reset control_input \
+        control_bar_input control_8_plus control_bar_8_plus control_7_plus \
+        control_bar_7_plus control_6_plus control_bar_6_plus \
+        control_5_plus control_bar_5_plus control_4_plus \
+        control_bar_4_plus control_3_plus control_bar_3_plus \
+        control_2_plus control_bar_2_plus control_1_plus \
+        control_bar_1_plus SAR_out_7 SAR_out_6 SAR_out_5 SAR_out_4 \
+        SAR_out_3 SAR_out_2 SAR_out_1 SAR_out_0 control_8_minus \
+        control_bar_8_minus control_7_minus control_bar_7_minus \
+        control_6_minus control_bar_6_minus control_5_minus \
+        control_bar_5_minus control_4_minus control_bar_4_minus \
+        control_3_minus control_bar_3_minus control_2_minus \
+        control_bar_2_minus VDD VSS
+    I90 (net24 net23 VDD VSS) INVD0BWP30P140LVT
+    I89 (n_123 net24 VDD VSS) INVD0BWP30P140LVT
+    g1876 (n_54 n_55 VDD VSS) INVD0BWP30P140LVT
+    g1894 (n_89 n_46 VDD VSS) INVD0BWP30P140LVT
+    I88 (net20 net21 VDD VSS) CKBD1BWP30P140LVT
+    I85 (net18 net19 VDD VSS) CKBD1BWP30P140LVT
+    I79 (n_16 net16 VDD VSS) CKBD1BWP30P140LVT
+    I78 (net16 net13 VDD VSS) CKBD1BWP30P140LVT
+    I80 (n_89 net15 VDD VSS) CKBD1BWP30P140LVT
+    I73 (net105 net108 VDD VSS) CKBD1BWP30P140LVT
+    I72 (n_89 net105 VDD VSS) CKBD1BWP30P140LVT
+    I71 (net10 net1 VDD VSS) CKBD1BWP30P140LVT
+    I70 (n_89 net10 VDD VSS) CKBD1BWP30P140LVT
+    I69 (n_89 net6 VDD VSS) CKBD1BWP30P140LVT
+    I67 (net5 net9 VDD VSS) CKBD1BWP30P140LVT
+    I68 (net6 net5 VDD VSS) CKBD1BWP30P140LVT
+    I81 (n_34 net4 VDD VSS) CKBD1BWP30P140LVT
+    I62 (net2 net3 VDD VSS) CKBD1BWP30P140LVT
+    I61 (net15 net2 VDD VSS) CKBD1BWP30P140LVT
+    I60 (n_89 net69 VDD VSS) CKBD1BWP30P140LVT
+    I59 (net69 net65 VDD VSS) CKBD1BWP30P140LVT
+    I58 (net58 net59 VDD VSS) CKBD1BWP30P140LVT
+    I57 (n_89 net58 VDD VSS) CKBD1BWP30P140LVT
+    I56 (n_89 net51 VDD VSS) CKBD1BWP30P140LVT
+    I55 (net51 net50 VDD VSS) CKBD1BWP30P140LVT
+    I54 (net50 net7 VDD VSS) CKBD1BWP30P140LVT
+    I53 (net44 net47 VDD VSS) CKBD1BWP30P140LVT
+    I52 (net41 net44 VDD VSS) CKBD1BWP30P140LVT
+    I51 (n_89 net41 VDD VSS) CKBD1BWP30P140LVT
+    I49 (net39 net40 VDD VSS) CKBD1BWP30P140LVT
+    I48 (n_89 net39 VDD VSS) CKBD1BWP30P140LVT
+    I47 (net29 net38 VDD VSS) CKBD1BWP30P140LVT
+    I46 (net28 net29 VDD VSS) CKBD1BWP30P140LVT
+    I45 (n_89 net28 VDD VSS) CKBD1BWP30P140LVT
+    I86 (n_22 net20 VDD VSS) CKBD1BWP30P140LVT
+    I74 (net40 net12 VDD VSS) CKBD1BWP30P140LVT
+    I41 (net17 net22 VDD VSS) CKBD1BWP30P140LVT
+    I40 (n_89 net17 VDD VSS) CKBD1BWP30P140LVT
+    I82 (net4 net18 VDD VSS) CKBD1BWP30P140LVT
+    I38 (n_89 net14 VDD VSS) CKBD1BWP30P140LVT
+    I37 (net14 net11 VDD VSS) CKBD1BWP30P140LVT
+    I36 (net11 net8 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp2007 (STATE_2 n_143 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp1980 (n_13 n_10 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp1970 (n_43 n_102 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp1989 (reg_Comparator_out n_123 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp2025 (n_46 n_163 VDD VSS) CKBD1BWP30P140LVT
+    g1867 (n_62 n_89 n_63 VDD VSS) NR2D0BWP30P140LVT
+    g1886 (n_89 n_48 n_49 VDD VSS) NR2D0BWP30P140LVT
+    g1866 (n_54 n_89 n_65 VDD VSS) NR2D0BWP30P140LVT
+    g1895 (n_23 n_123 n_24 VDD VSS) NR2D0BWP30P140LVT
+    g1879 (n_59 n_52 n_60 VDD VSS) NR2D0BWP30P140LVT
+    g1857 (n_53 STATE_3 n_56 VDD VSS) NR2D0BWP30P140LVT
+    g1875 (n_55 net23 n_86 VDD VSS) NR2D0BWP30P140LVT
+    g1853 (n_57 n_10 n_61 VDD VSS) NR2D0BWP30P140LVT
+    g1883 (n_44 n_6 n_54 VDD VSS) NR2D0BWP30P140LVT
+    g1905 (n_18 n_36 n_39 VDD VSS) NR2D0BWP30P140LVT
+    g1873 (n_53 n_52 n_70 VDD VSS) NR2D0BWP30P140LVT
+    g1914 (STATE_3 n_26 n_30 VDD VSS) NR2D0BWP30P140LVT
+    g1906 (n_102 n_123 n_29 VDD VSS) NR2D0BWP30P140LVT
+    g1903 (n_27 n_26 n_48 VDD VSS) NR2D0BWP30P140LVT
+    g1892 (n_163 n_102 n_67 VDD VSS) NR2D0BWP30P140LVT
+    g1887 (n_39 n_27 n_40 VDD VSS) ND2D0BWP30P140LVT
+    g1856 (n_57 n_163 n_58 VDD VSS) ND2D0BWP30P140LVT
+    g1884 (n_46 n_42 n_68 VDD VSS) ND2D0BWP30P140LVT
+    g1918 (STATE_2 n_9 VDD VSS) INVD1BWP30P140LVT
+    g1925 (STATE_1 n_13 VDD VSS) INVD1BWP30P140LVT
+    g1923 (n_10 n_5 VDD VSS) INVD1BWP30P140LVT
+    g1934 (STATE_0 n_6 VDD VSS) INVD1BWP30P140LVT
+    g1926 (STATE_3 n_52 VDD VSS) INVD1BWP30P140LVT
+    g1927 (STATE_0 n_0 VDD VSS) INVD1BWP30P140LVT
+    g1907 (n_15 n_23 VDD VSS) INVD1BWP30P140LVT
+    g1932 (n_6 n_2 VDD VSS) INVD1BWP30P140LVT
+    g1909 (n_36 n_17 VDD VSS) INVD1BWP30P140LVT
+    g1917 (n_9 STATE_1 n_25 VDD VSS) NR2D1BWP30P140LVT
+    g1915 (n_13 STATE_3 n_18 VDD VSS) NR2D1BWP30P140LVT
+    g1912 (STATE_3 n_143 n_36 VDD VSS) NR2D1BWP30P140LVT
+    g1900 (n_17 STATE_1 n_89 VDD VSS) NR2D1BWP30P140LVT
+    reg_control_2_plus_reg (net7 n_41 control_2_plus VDD VSS) \
+        LNQD1BWP30P140LVT
+    reg_control_3_minus_reg (net9 n_31 control_3_minus VDD VSS) \
+        LNQD1BWP30P140LVT
+    reg_control_6_minus_reg (net59 n_63 control_6_minus VDD VSS) \
+        LNQD1BWP30P140LVT
+    reg_control_3_plus_reg (net65 n_49 control_3_plus VDD VSS) \
+        LNQD1BWP30P140LVT
+    reg_control_4_minus_reg (net3 n_64 control_4_minus VDD VSS) \
+        LNQD1BWP30P140LVT
+    reg_control_4_plus_reg (net8 n_65 control_4_plus VDD VSS) \
+        LNQD1BWP30P140LVT
+    reg_SAR_out_reg\[5\] (n_62 n_38 SAR_out_5 VDD VSS) LNQD1BWP30P140LVT
+    reg_SAR_out_reg\[1\] (n_70 n_60 SAR_out_1 VDD VSS) LNQD1BWP30P140LVT
+    reg_control_1_plus_reg (net108 n_74 control_1_plus VDD VSS) \
+        LNQD1BWP30P140LVT
+    reg_SAR_out_reg\[2\] (n_56 STATE_3 SAR_out_2 VDD VSS) \
+        LNQD1BWP30P140LVT
+    reg_SAR_out_reg\[4\] (n_86 n_39 SAR_out_4 VDD VSS) LNQD1BWP30P140LVT
+    g1902 (n_43 reg_Comparator_out n_16 VDD VSS) CKND2D0BWP30P140LVT
+    g1880 (n_29 n_25 n_53 VDD VSS) CKND2D0BWP30P140LVT
+    g1882 (n_29 n_36 n_57 VDD VSS) CKND2D0BWP30P140LVT
+    g1878 (n_37 n_36 n_38 VDD VSS) INR2D0BWP30P140LVT
+    g1881 (n_29 n_44 n_62 VDD VSS) INR2D0BWP30P140LVT
+    g1818 (control_2_minus control_bar_2_minus VDD VSS) CKND0BWP30P140LVT
+    g1929 (n_102 n_11 VDD VSS) CKND0BWP30P140LVT
+    g1847 (control_2_plus control_bar_2_plus VDD VSS) CKND0BWP30P140LVT
+    g1834 (control_3_minus control_bar_3_minus VDD VSS) CKND0BWP30P140LVT
+    g1821 (control_6_minus control_bar_6_minus VDD VSS) CKND0BWP30P140LVT
+    g1913 (n_27 n_19 VDD VSS) CKND0BWP30P140LVT
+    g1849 (control_3_plus control_bar_3_plus VDD VSS) CKND0BWP30P140LVT
+    g1837 (control_4_minus control_bar_4_minus VDD VSS) CKND0BWP30P140LVT
+    g1836 (control_4_plus control_bar_4_plus VDD VSS) CKND0BWP30P140LVT
+    g1817 (control_5_minus control_bar_5_minus VDD VSS) CKND0BWP30P140LVT
+    g1823 (control_8_minus control_bar_8_minus VDD VSS) CKND0BWP30P140LVT
+    g1850 (control_6_plus control_bar_6_plus VDD VSS) CKND0BWP30P140LVT
+    g1824 (control_7_minus control_bar_7_minus VDD VSS) CKND0BWP30P140LVT
+    g1835 (control_5_plus control_bar_5_plus VDD VSS) CKND0BWP30P140LVT
+    g1822 (control_1_plus control_bar_1_plus VDD VSS) CKND0BWP30P140LVT
+    g1848 (control_input control_bar_input VDD VSS) CKND0BWP30P140LVT
+    g1851 (control_8_plus control_bar_8_plus VDD VSS) CKND0BWP30P140LVT
+    g1852 (control_7_plus control_bar_7_plus VDD VSS) CKND0BWP30P140LVT
+    g1931 (n_6 n_43 VDD VSS) CKND0BWP30P140LVT
+    g1922 (n_10 n_26 VDD VSS) CKND0BWP30P140LVT
+    g1908 (reg_Comparator_out n_34 VDD VSS) CKND0BWP30P140LVT
+    g1872 (n_28 n_42 reset n_66 VDD VSS) AOI21D1BWP30P140LVT
+    g1870 (n_20 n_50 reset n_51 VDD VSS) AOI21D1BWP30P140LVT
+    g1874 (n_59 STATE_3 n_89 n_74 VDD VSS) AOI21D1BWP30P140LVT
+    g1893 (n_20 n_59 VDD VSS) CKND1BWP30P140LVT
+    g1901 (n_27 n_5 n_28 VDD VSS) ND2D1BWP30P140LVT
+    g1897 (n_36 n_2 n_42 VDD VSS) ND2D1BWP30P140LVT
+    g1904 (n_18 n_6 n_37 VDD VSS) ND2D1BWP30P140LVT
+    g1899 (n_18 STATE_2 n_44 VDD VSS) ND2D1BWP30P140LVT
+    g1916 (n_52 n_2 n_27 VDD VSS) CKND2D1BWP30P140LVT
+    STATE_reg\[1\] (n_66 clk STATE_1 UNCONNECTED1 VDD VSS) \
+        DFND1BWP30P140LVT
+    STATE_reg\[2\] (n_72 clk STATE_2 UNCONNECTED0 VDD VSS) \
+        DFND1BWP30P140LVT
+    STATE_reg\[0\] (n_85 clk STATE_0 UNCONNECTED VDD VSS) \
+        DFND1BWP30P140LVT
+    STATE_reg\[3\] (n_51 clk STATE_3 UNCONNECTED2 VDD VSS) \
+        DFND1BWP30P140LVT
+    reg_Comparator_out_reg (Comparator_out clk reg_Comparator_out \
+        UNCONNECTED3 VDD VSS) DFND1BWP30P140LVT
+    g1898 (n_25 STATE_3 n_50 VDD VSS) IND2D1BWP30P140LVT
+    g1896 (n_25 n_0 n_20 VDD VSS) ND2OPTIBD1BWP30P140LVT
+    g1910 (n_0 n_52 n_15 VDD VSS) NR2OPTIBD1BWP30P140LVT
+    reg_control_2_minus_reg (net1 n_71 control_2_minus VDD VSS) \
+        LHQD1BWP30P140LVT
+    reg_SAR_out_reg\[3\] (n_35 n_40 SAR_out_3 VDD VSS) LHQD1BWP30P140LVT
+    reg_control_5_minus_reg (net22 n_87 control_5_minus VDD VSS) \
+        LHQD1BWP30P140LVT
+    reg_control_8_minus_reg (n_32 n_68 control_8_minus VDD VSS) \
+        LHQD1BWP30P140LVT
+    reg_control_6_plus_reg (net38 n_47 control_6_plus VDD VSS) \
+        LHQD1BWP30P140LVT
+    reg_control_7_minus_reg (net12 n_58 control_7_minus VDD VSS) \
+        LHQD1BWP30P140LVT
+    reg_control_5_plus_reg (net47 n_45 control_5_plus VDD VSS) \
+        LHQD1BWP30P140LVT
+    reg_SAR_out_reg\[0\] (n_24 n_50 SAR_out_0 VDD VSS) LHQD1BWP30P140LVT
+    reg_control_input_reg (n_67 n_50 control_input VDD VSS) \
+        LHQD1BWP30P140LVT
+    reg_SAR_out_reg\[7\] (net21 n_68 SAR_out_7 VDD VSS) LHQD1BWP30P140LVT
+    reg_SAR_out_reg\[6\] (n_61 n_36 SAR_out_6 VDD VSS) LHQD1BWP30P140LVT
+    reg_control_8_plus_reg (n_67 n_89 control_8_plus VDD VSS) \
+        LHQD1BWP30P140LVT
+    reg_control_7_plus_reg (n_89 n_68 control_7_plus VDD VSS) \
+        LHQD1BWP30P140LVT
+    g1871 (n_42 n_10 reg_Comparator_out n_22 VDD VSS) NR3D0BWP30P140LVT
+    g1891 (n_17 n_43 n_46 n_47 VDD VSS) OAI21D0BWP30P140LVT
+    g1869 (n_44 n_102 n_46 n_45 VDD VSS) OAI21D0BWP30P140LVT
+    g1838 (n_37 n_33 reset n_72 VDD VSS) AOI21D0P7BWP30P140LVT
+    g1885 (n_30 n_11 n_89 n_41 VDD VSS) AOI21D0P7BWP30P140LVT
+    g1868 (n_29 n_30 n_89 n_31 VDD VSS) AOI21D0P7BWP30P140LVT
+    g1864 (n_48 net19 n_89 n_64 VDD VSS) AOI21D0P7BWP30P140LVT
+    g1865 (net13 n_26 STATE_2 n_32 VDD VSS) AOI21D0P7BWP30P140LVT
+    g1841 (n_70 n_89 n_71 VDD VSS) OR2D0BWP30P140LVT
+    g1840 (n_86 n_89 n_87 VDD VSS) OR2D0BWP30P140LVT
+    g1890 (n_19 n_25 n_34 n_35 VDD VSS) AN3D1BWP30P140LVT
+    g1815 (n_74 n_44 n_21 reset n_85 VDD VSS) AOI31D1BWP30P140LVT
+    g1889 (n_13 n_9 STATE_0 n_15 n_5 n_21 VDD VSS) AOI32D1BWP30P140LVT
+    g1888 (n_23 STATE_1 n_143 n_33 VDD VSS) OAI21D1BWP30P140LVT
+ends Control_logic
+// End of subcircuit definition.
+
+// Library name: And_Sram
+// Cell name: SAR_adc_innovation
+// View name: schematic
+subckt SAR_adc_innovation OUTPUT_7 OUTPUT_6 OUTPUT_5 OUTPUT_4 OUTPUT_3 \
+        OUTPUT_2 OUTPUT_1 OUTPUT_0 VDD VSS Vref clk reset vin \
+        vin_plus_source
+    I19 (control_bar_1_plus control_1_plus 0 C_1_TOP) switch mul_switch=10
+    I18 (control_1_plus control_bar_1_plus Vref C_1_TOP) switch \
+        mul_switch=10
+    I17 (control_input control_bar_input vin_plus_source vin_plus) switch \
+        mul_switch=10
+    I14 (control_bar_2_plus control_2_plus 0 C_2_TOP) switch mul_switch=10
+    I13 (control_2_plus control_bar_2_plus Vref C_2_TOP) switch \
+        mul_switch=10
+    I12 (control_bar_3_plus control_3_plus 0 C_4_TOP) switch mul_switch=10
+    I11 (control_3_plus control_bar_3_plus Vref C_4_TOP) switch \
+        mul_switch=10
+    I10 (control_bar_4_plus control_4_plus 0 C_8_TOP) switch mul_switch=10
+    I9 (control_4_plus control_bar_4_plus Vref C_8_TOP) switch \
+        mul_switch=10
+    I8 (control_bar_5_plus control_5_plus 0 C_16_TOP) switch mul_switch=10
+    I7 (control_5_plus control_bar_5_plus Vref C_16_TOP) switch \
+        mul_switch=10
+    I6 (control_bar_6_plus control_6_plus 0 C_32_TOP) switch mul_switch=10
+    I37 (control_bar_2_minus control_2_minus 0 net3) switch mul_switch=10
+    I5 (control_6_plus control_bar_6_plus Vref C_32_TOP) switch \
+        mul_switch=10
+    I36 (control_2_minus control_bar_2_minus Vref net3) switch \
+        mul_switch=10
+    I35 (control_bar_3_minus control_3_minus 0 net2) switch mul_switch=10
+    I4 (control_bar_7_plus control_7_plus 0 C_64_TOP) switch mul_switch=10
+    I34 (control_3_minus control_bar_3_minus Vref net2) switch \
+        mul_switch=10
+    I33 (control_bar_4_minus control_4_minus 0 net1) switch mul_switch=10
+    I32 (control_4_minus control_bar_4_minus Vref net1) switch \
+        mul_switch=10
+    I31 (control_bar_5_minus control_5_minus 0 net7) switch mul_switch=10
+    I3 (control_7_plus control_bar_7_plus Vref C_64_TOP) switch \
+        mul_switch=10
+    I30 (control_5_minus control_bar_5_minus Vref net7) switch \
+        mul_switch=10
+    I29 (control_bar_6_minus control_6_minus 0 net6) switch mul_switch=10
+    I2 (control_bar_8_plus control_8_plus 0 C_128_TOP) switch \
+        mul_switch=10
+    I28 (control_6_minus control_bar_6_minus Vref net6) switch \
+        mul_switch=10
+    I27 (control_bar_7_minus control_7_minus 0 net5) switch mul_switch=10
+    I26 (control_7_minus control_bar_7_minus Vref net5) switch \
+        mul_switch=10
+    I25 (control_bar_8_minus control_8_minus 0 net4) switch mul_switch=10
+    I44 (control_input control_bar_input vin vin_minus) switch \
+        mul_switch=10
+    I23 (control_8_minus control_bar_8_minus Vref net4) switch \
+        mul_switch=10
+    I1 (control_8_plus control_bar_8_plus Vref C_128_TOP) switch \
+        mul_switch=10
+    C9 (C_1_TOP vin_plus) capacitor c=10f ic=init_cond
+    C8 (C_2_TOP vin_plus) capacitor c=10f ic=init_cond
+    C7 (C_4_TOP vin_plus) capacitor c=20f ic=init_cond
+    C6 (C_8_TOP vin_plus) capacitor c=40f ic=init_cond
+    C5 (C_16_TOP vin_plus) capacitor c=80f ic=init_cond
+    C26 (Vref vin_minus) capacitor c=10f ic=init_cond
+    C2 (C_32_TOP vin_plus) capacitor c=160f ic=init_cond
+    C24 (net3 vin_minus) capacitor c=10f ic=init_cond
+    C3 (net2 vin_minus) capacitor c=20f ic=init_cond
+    C23 (net1 vin_minus) capacitor c=40f ic=init_cond
+    C1 (C_64_TOP vin_plus) capacitor c=320f ic=init_cond
+    C22 (net7 vin_minus) capacitor c=80f ic=init_cond
+    C4 (net6 vin_minus) capacitor c=160f ic=init_cond
+    C21 (net5 vin_minus) capacitor c=320f ic=init_cond
+    C0 (C_128_TOP vin_plus) capacitor c=640f ic=init_cond
+    C20 (net4 vin_minus) capacitor c=640f ic=init_cond
+    I20 (clk VSS Comparator_out VDD vin_minus vin_plus) strong_arm_latch3
+    I22 (clk Comparator_out reset control_input control_bar_input \
+        control_8_plus control_bar_8_plus control_7_plus \
+        control_bar_7_plus control_6_plus control_bar_6_plus \
+        control_5_plus control_bar_5_plus control_4_plus \
+        control_bar_4_plus control_3_plus control_bar_3_plus \
+        control_2_plus control_bar_2_plus control_1_plus \
+        control_bar_1_plus OUTPUT_7 OUTPUT_6 OUTPUT_5 OUTPUT_4 OUTPUT_3 \
+        OUTPUT_2 OUTPUT_1 OUTPUT_0 control_8_minus control_bar_8_minus \
+        control_7_minus control_bar_7_minus control_6_minus \
+        control_bar_6_minus control_5_minus control_bar_5_minus \
+        control_4_minus control_bar_4_minus control_3_minus \
+        control_bar_3_minus control_2_minus control_bar_2_minus VDD VSS) \
+        Control_logic
+ends SAR_adc_innovation
+// End of subcircuit definition.
+
+// Library name: Overall_control_ckt_24cycles_12052023
+// Cell name: Overall_control_ckt
+// View name: schematic
+subckt Overall_control_ckt clk load_weights reset BL_W0_input BL_W1_input \
+        BL_W2_input BL_W3_input BL_W4_input BL_W5_input BL_W6_input \
+        BL_W7_input X0_input X1_input X2_input X3_input X4_input X5_input \
+        X6_input X7_input WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL_W0 WL_W1 \
+        WL_W2 WL_W3 WL_W4 WL_W5 WL_W6 WL_W7 x00 x01 x02 x03 x04 x05 x06 \
+        x07 BL_W0 BL_W1 BL_W2 BL_W3 BL_W4 BL_W5 BL_W6 BL_W7 BLB_W0 BLB_W1 \
+        BLB_W2 BLB_W3 BLB_W4 BLB_W5 BLB_W6 BLB_W7 precharge control \
+        control_bar control_delayed control_delayed_bar ADC_reset VDD VSS
+    g3224 (n_17 n_117 n_33 n_64 VDD VSS) OAI21D0BWP30P140LVT
+    g3217 (n_33 n_117 n_40 VDD VSS) CKND2D0BWP30P140LVT
+    g3240 (n_216 n_41 n_74 VDD VSS) CKND2D0BWP30P140LVT
+    g3237 (n_17 n_147 n_33 VDD VSS) CKND2D0BWP30P140LVT
+    drc_buf_sp3413 (n_28 n_227 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp3405 (n_28 n_216 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp3404 (n_216 n_217 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp3395 (n_64 n_207 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp3350 (STATE_3 n_3 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp3332 (STATE_0 n_137 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp3323 (n_60 n_127 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp3377 (reset n_187 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp3341 (n_34 n_147 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp3386 (n_0 n_197 VDD VSS) CKBD1BWP30P140LVT
+    drc_buf_sp3314 (n_41 n_117 VDD VSS) CKBD1BWP30P140LVT
+    g3244 (n_11 n_0 n_14 VDD VSS) CKND2D1BWP30P140LVT
+    g3251 (STATE_2 n_0 n_17 VDD VSS) CKND2D1BWP30P140LVT
+    g3222 (n_98 n_3 n_45 VDD VSS) CKND2D1BWP30P140LVT
+    g3193 (n_57 STATE_0 n_58 VDD VSS) CKAN2D1BWP30P140LVT
+    g3228 (n_28 BL_W0_input n_26 VDD VSS) CKAN2D1BWP30P140LVT
+    g3235 (n_217 BL_W6_input n_20 VDD VSS) CKAN2D1BWP30P140LVT
+    g3233 (n_227 BL_W7_input n_22 VDD VSS) CKAN2D1BWP30P140LVT
+    g3230 (n_227 BL_W2_input n_24 VDD VSS) CKAN2D1BWP30P140LVT
+    g3231 (n_216 BL_W4_input n_23 VDD VSS) CKAN2D1BWP30P140LVT
+    g3227 (n_216 BL_W3_input n_27 VDD VSS) CKAN2D1BWP30P140LVT
+    g3226 (n_217 BL_W5_input n_29 VDD VSS) CKAN2D1BWP30P140LVT
+    g3229 (n_217 BL_W1_input n_25 VDD VSS) CKAN2D1BWP30P140LVT
+    g3192 (n_64 X6_input n_54 VDD VSS) CKAN2D1BWP30P140LVT
+    g3194 (n_207 X7_input n_56 VDD VSS) CKAN2D1BWP30P140LVT
+    g3191 (n_207 X2_input n_65 VDD VSS) CKAN2D1BWP30P140LVT
+    g3186 (n_207 X3_input n_69 VDD VSS) CKAN2D1BWP30P140LVT
+    g3221 (n_98 n_39 n_57 VDD VSS) CKAN2D1BWP30P140LVT
+    g3232 (n_36 n_3 n_30 VDD VSS) CKAN2D1BWP30P140LVT
+    STATE_reg\[3\] (n_36 n_127 n_47 clk STATE_3 VDD VSS) \
+        SDFQND0BWP30P140LVT
+    g3220 (n_21 reset n_71 VDD VSS) NR2OPTIBD1BWP30P140LVT
+    g3245 (STATE_3 reset n_60 VDD VSS) NR2OPTIBD1BWP30P140LVT
+    g3248 (n_137 n_197 n_35 VDD VSS) NR2OPTIBD1BWP30P140LVT
+    g3238 (n_17 n_137 n_47 VDD VSS) NR2OPTIBD1BWP30P140LVT
+    g3250 (STATE_4 n_187 n_36 VDD VSS) NR2OPTIBD1BWP30P140LVT
+    g3198 (BL_W0 BLB_W0 VDD VSS) CKND0BWP30P140LVT
+    g3166 (control_delayed control_delayed_bar VDD VSS) CKND0BWP30P140LVT
+    g3181 (control control_bar VDD VSS) CKND0BWP30P140LVT
+    g3202 (BL_W6 BLB_W6 VDD VSS) CKND0BWP30P140LVT
+    g3203 (BL_W7 BLB_W7 VDD VSS) CKND0BWP30P140LVT
+    g3205 (BL_W2 BLB_W2 VDD VSS) CKND0BWP30P140LVT
+    g3200 (BL_W4 BLB_W4 VDD VSS) CKND0BWP30P140LVT
+    g3199 (BL_W3 BLB_W3 VDD VSS) CKND0BWP30P140LVT
+    g3201 (BL_W5 BLB_W5 VDD VSS) CKND0BWP30P140LVT
+    g3204 (BL_W1 BLB_W1 VDD VSS) CKND0BWP30P140LVT
+    g3241 (n_14 n_15 VDD VSS) CKND0BWP30P140LVT
+    g3260 (n_147 n_7 VDD VSS) CKND0BWP30P140LVT
+    g3215 (n_45 n_46 VDD VSS) CKND0BWP30P140LVT
+    g3263 (n_18 n_41 VDD VSS) CKND0BWP30P140LVT
+    g3255 (n_11 n_2 VDD VSS) CKND0BWP30P140LVT
+    g3262 (n_3 n_34 VDD VSS) CKND0BWP30P140LVT
+    g3249 (n_197 n_7 n_39 VDD VSS) NR2D0BWP30P140LVT
+    g3246 (n_2 n_34 n_28 VDD VSS) NR2D0BWP30P140LVT
+    g3236 (n_11 load_weights reset n_37 VDD VSS) NR3D0BWP30P140LVT
+    g2 (n_18 STATE_2 n_98 VDD VSS) XOR2UD1BWP30P140LVT
+    WL_W0_reg (n_58 n_74 WL_W0 VDD VSS) LHQD1BWP30P140LVT
+    reg_BL_W0_reg (n_26 n_74 BL_W0 VDD VSS) LHQD1BWP30P140LVT
+    reg_control_delayed_reg (n_48 n_74 control_delayed VDD VSS) \
+        LHQD1BWP30P140LVT
+    reg_precharge_reg (n_42 n_74 precharge VDD VSS) LHQD1BWP30P140LVT
+    reg_control_reg (n_40 n_74 control VDD VSS) LHQD1BWP30P140LVT
+    reg_BL_W6_reg (n_20 n_74 BL_W6 VDD VSS) LHQD1BWP30P140LVT
+    reg_BL_W7_reg (n_22 n_74 BL_W7 VDD VSS) LHQD1BWP30P140LVT
+    reg_BL_W2_reg (n_24 n_74 BL_W2 VDD VSS) LHQD1BWP30P140LVT
+    reg_BL_W4_reg (n_23 n_74 BL_W4 VDD VSS) LHQD1BWP30P140LVT
+    reg_BL_W3_reg (n_27 n_74 BL_W3 VDD VSS) LHQD1BWP30P140LVT
+    reg_BL_W5_reg (n_29 n_74 BL_W5 VDD VSS) LHQD1BWP30P140LVT
+    reg_BL_W1_reg (n_25 n_74 BL_W1 VDD VSS) LHQD1BWP30P140LVT
+    WL_W1_reg (n_57 n_74 WL_W1 VDD VSS) LHQD1BWP30P140LVT
+    WL_W2_reg (n_39 n_74 WL_W2 VDD VSS) LHQD1BWP30P140LVT
+    WL_W3_reg (n_64 n_74 WL_W3 VDD VSS) LHQD1BWP30P140LVT
+    reg_ADC_reset_reg (n_46 n_74 ADC_reset VDD VSS) LHQD1BWP30P140LVT
+    reg_x06_reg (n_54 n_74 x06 VDD VSS) LHQD1BWP30P140LVT
+    reg_x01_reg (n_55 n_74 x01 VDD VSS) LHQD1BWP30P140LVT
+    reg_x07_reg (n_56 n_74 x07 VDD VSS) LHQD1BWP30P140LVT
+    reg_x00_reg (n_61 n_74 x00 VDD VSS) LHQD1BWP30P140LVT
+    reg_x05_reg (n_63 n_74 x05 VDD VSS) LHQD1BWP30P140LVT
+    reg_x04_reg (n_66 n_74 x04 VDD VSS) LHQD1BWP30P140LVT
+    reg_x02_reg (n_65 n_74 x02 VDD VSS) LHQD1BWP30P140LVT
+    reg_x03_reg (n_69 n_74 x03 VDD VSS) LHQD1BWP30P140LVT
+    WL0_reg (n_28 n_74 WL0 VDD VSS) LHQD1BWP30P140LVT
+    Thru3 (WL_W0 WL_W4) iprobe
+    Thru2 (WL_W1 WL_W5) iprobe
+    Thru1 (WL_W2 WL_W6) iprobe
+    Thru0 (WL_W3 WL_W7) iprobe
+    Thru10 (WL0 WL1) iprobe
+    Thru9 (WL0 WL2) iprobe
+    Thru8 (WL0 WL3) iprobe
+    Thru7 (WL0 WL4) iprobe
+    Thru6 (WL0 WL5) iprobe
+    Thru5 (WL0 WL6) iprobe
+    Thru4 (WL0 WL7) iprobe
+    g3195 (X1_input n_62 n_55 VDD VSS) INR2D0BWP30P140LVT
+    g3190 (X0_input n_62 n_61 VDD VSS) INR2D0BWP30P140LVT
+    g3184 (X5_input n_62 n_63 VDD VSS) INR2D0BWP30P140LVT
+    g3185 (X4_input n_62 n_66 VDD VSS) INR2D0BWP30P140LVT
+    g3178 (n_32 n_127 n_71 STATE_4 n_73 VDD VSS) AO22D0BWP30P140LVT
+    g3197 (n_98 n_127 n_30 STATE_2 n_44 VDD VSS) AO22D0BWP30P140LVT
+    STATE_reg\[0\] (n_44 n_77 STATE_1 clk STATE_0 VDD VSS) \
+        DFMQD1BWP30P140LVT
+    g3180 (n_45 n_187 n_98 n_12 n_77 VDD VSS) OAI22D1BWP30P140LVT
+    g3242 (n_60 n_12 VDD VSS) INVD1BWP30P140LVT
+    g3223 (n_15 n_34 n_39 n_41 n_62 VDD VSS) AOI22D0BWP30P140LVT
+    g3243 (n_227 n_19 VDD VSS) INVD0BWP30P140LVT
+    g3216 (n_197 n_147 n_117 n_19 n_42 VDD VSS) OAI31D0BWP30P140LVT
+    g3196 (n_47 n_3 n_41 n_48 VDD VSS) OA21D0BWP30P140LVT
+    g3162 (n_77 n_137 n_38 n_78 VDD VSS) IOA21D0BWP30P140LVT
+    g3177 (n_60 n_37 n_36 n_35 n_38 VDD VSS) OAI31D1BWP30P140LVT
+    STATE_reg\[2\] (n_76 clk STATE_2 n_11 VDD VSS) DFD1BWP30P140LVT
+    STATE_reg\[4\] (n_73 clk STATE_4 n_18 VDD VSS) DFD1BWP30P140LVT
+    STATE_reg\[1\] (n_78 clk STATE_1 n_0 VDD VSS) DFD1BWP30P140LVT
+    g3164 (n_72 n_76 VDD VSS) CKND1BWP30P140LVT
+    g3247 (n_17 n_16 VDD VSS) CKND1BWP30P140LVT
+    g3234 (STATE_0 n_2 n_16 n_21 VDD VSS) AOI21D0P7BWP30P140LVT
+    g3218 (n_14 STATE_0 n_18 n_32 VDD VSS) OAI21D1BWP30P140LVT
+    g3219 (n_60 STATE_4 n_30 n_31 VDD VSS) AO21D1BWP30P140LVT
+    g3165 (n_35 n_31 n_37 STATE_3 n_71 n_72 VDD VSS) AOI221D1BWP30P140LVT
+ends Overall_control_ckt
+// End of subcircuit definition.
+
+// Library name: And_Sram
+// Cell name: testing
+// View name: schematic
+subckt testing VDD VSS out vin vtail
+    M0 (out out VSS 0) nch_mac l=30n w=2.8u multi=16 nf=28 sd=100n \
+        ad=1.4e-13 as=1.45e-13 pd=5.6u ps=5.9u sa=75n sb=75n sa1=75n \
+        sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M7 (net10 net8 VSS 0) nch_mac l=180.0n w=100n multi=8 nf=1 sd=120.0n \
+        ad=9.5e-15 as=9.5e-15 pd=390.0n ps=390.0n sa=75n sb=75n sa1=75n \
+        sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M6 (net8 net8 VSS 0) nch_mac l=180.0n w=100n multi=8 nf=1 sd=120.0n \
+        ad=9.5e-15 as=9.5e-15 pd=390.0n ps=390.0n sa=75n sb=75n sa1=75n \
+        sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M10 (net9 vtail VDD VDD) pch_mac l=180.0n w=1.6u multi=1 nf=16 \
+        sd=120.0n ad=9.6e-14 as=1.03e-13 pd=3.52u ps=3.86u sa=75n sb=75n \
+        sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n \
+        spa1=100n spa2=100n spa3=100n sap=91.9776n sapb=114.444n \
+        spba=115.715168n spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 \
+        spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 \
+        spomb1=1.11111e+60
+    M9 (net10 vin net9 net9) pch_mac l=360.0n w=1u multi=1 nf=10 sd=120.0n \
+        ad=6e-14 as=6.7e-14 pd=2.2u ps=2.54u sa=75n sb=75n sa1=75n sa2=75n \
+        sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M8 (net8 out net9 net9) pch_mac l=360.0n w=1u multi=1 nf=10 sd=120.0n \
+        ad=6e-14 as=6.7e-14 pd=2.2u ps=2.54u sa=75n sb=75n sa1=75n sa2=75n \
+        sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M11 (out net10 VDD VDD) pch_mac l=480.0n w=100n multi=1 nf=1 sd=120.0n \
+        ad=9.5e-15 as=9.5e-15 pd=390.0n ps=390.0n nrd=1.466664 \
+        nrs=1.466664 sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n \
+        sb2=75n sb3=75n spa=100n spa1=100n spa2=100n spa3=100n \
+        sap=91.9776n sapb=114.444n spba=115.715168n spba1=117.042727n \
+        dfm_flag=0 spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 \
+        spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+ends testing
+// End of subcircuit definition.
+
+// Library name: And_Sram
+// Cell name: testing_testbench
+// View name: schematic
+subckt testing_testbench VDD VSS out v_second_stage_current_source vin \
+        vtail
+    M1 (out out 0 0) nch_mac l=30n w=100n multi=8 nf=1 sd=100n ad=7.5e-15 \
+        as=7.5e-15 pd=350.0n ps=350.0n nrd=2.576626 nrs=2.576626 sa=75n \
+        sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n \
+        spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n sapb=114.444n \
+        spba=115.715168n spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 \
+        spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 \
+        spomb1=1.11111e+60
+    M0 (out v_second_stage_current_source VSS 0) nch_mac l=30n w=100n \
+        multi=1 nf=1 sd=100n ad=7.5e-15 as=7.5e-15 pd=350.0n ps=350.0n \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+    M7 (net4 net8 VSS 0) nch_mac l=180.0n w=100n multi=8 nf=1 sd=120.0n \
+        ad=9.5e-15 as=9.5e-15 pd=390.0n ps=390.0n sa=75n sb=75n sa1=75n \
+        sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M6 (net8 net8 VSS 0) nch_mac l=180.0n w=100n multi=8 nf=1 sd=120.0n \
+        ad=9.5e-15 as=9.5e-15 pd=390.0n ps=390.0n sa=75n sb=75n sa1=75n \
+        sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M10 (net9 vtail VDD VDD) pch_mac l=180.0n w=1.6u multi=1 nf=16 \
+        sd=120.0n ad=9.6e-14 as=1.03e-13 pd=3.52u ps=3.86u sa=75n sb=75n \
+        sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n \
+        spa1=100n spa2=100n spa3=100n sap=91.9776n sapb=114.444n \
+        spba=115.715168n spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 \
+        spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 \
+        spomb1=1.11111e+60
+    M9 (net4 vin net9 net9) pch_mac l=360.0n w=1u multi=1 nf=10 sd=120.0n \
+        ad=6e-14 as=6.7e-14 pd=2.2u ps=2.54u sa=75n sb=75n sa1=75n sa2=75n \
+        sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M8 (net8 out net9 net9) pch_mac l=360.0n w=1u multi=1 nf=10 sd=120.0n \
+        ad=6e-14 as=6.7e-14 pd=2.2u ps=2.54u sa=75n sb=75n sa1=75n sa2=75n \
+        sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+    M11 (out net4 VDD VDD) pch_mac l=480.0n w=3.8u multi=1 nf=38 sd=120.0n \
+        ad=2.28e-13 as=2.35e-13 pd=8.36u ps=8.7u sa=75n sb=75n sa1=75n \
+        sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n sb3=75n spa=100n spa1=100n \
+        spa2=100n spa3=100n sap=91.9776n sapb=114.444n spba=115.715168n \
+        spba1=117.042727n dfm_flag=0 spmt=1.11111e+15 spomt=0 \
+        spomt1=1.11111e+60 spmb=1.11111e+15 spomb=0 spomb1=1.11111e+60
+ends testing_testbench
+// End of subcircuit definition.
+
+// Library name: And_Sram
+// Cell name: new_sram_and_array_parallel_take9_without_veriloga
+// View name: schematic
+I262 (BL_W7 BLB_W7 VDD VSS WL7 x04 out_W_msb_x04 WL_W7) And_bitcell
+I261 (BL_W7 BLB_W7 VDD VSS WL7 x05 out_W_msb_x05 WL_W7) And_bitcell
+I260 (BL_W7 BLB_W7 VDD VSS WL7 x06 out_W_msb_x06 WL_W7) And_bitcell
+I259 (BL_W6 BLB_W6 VDD VSS WL6 x04 out_W_msb_x04 WL_W6) And_bitcell
+I258 (BL_W6 BLB_W6 VDD VSS WL6 x05 out_W_msb_x05 WL_W6) And_bitcell
+I257 (BL_W6 BLB_W6 VDD VSS WL6 x06 out_W_msb_x06 WL_W6) And_bitcell
+I256 (BL_W5 BLB_W5 VDD VSS WL5 x04 out_W_msb_x04 WL_W5) And_bitcell
+I255 (BL_W5 BLB_W5 VDD VSS WL5 x05 out_W_msb_x05 WL_W5) And_bitcell
+I254 (BL_W5 BLB_W5 VDD VSS WL5 x06 out_W_msb_x06 WL_W5) And_bitcell
+I253 (BL_W4 BLB_W4 VDD VSS WL4 x04 out_W_msb_x04 WL_W4) And_bitcell
+I252 (BL_W4 BLB_W4 VDD VSS WL4 x05 out_W_msb_x05 WL_W4) And_bitcell
+I251 (BL_W4 BLB_W4 VDD VSS WL4 x06 out_W_msb_x06 WL_W4) And_bitcell
+I250 (BL_W3 BLB_W3 VDD VSS WL3 x04 out_W_lsb_x04 WL_W3) And_bitcell
+I249 (BL_W3 BLB_W3 VDD VSS WL3 x05 out_W_lsb_x05 WL_W3) And_bitcell
+I248 (BL_W3 BLB_W3 VDD VSS WL3 x06 out_W_lsb_x06 WL_W3) And_bitcell
+I247 (BL_W2 BLB_W2 VDD VSS WL2 x04 out_W_lsb_x04 WL_W2) And_bitcell
+I246 (BL_W2 BLB_W2 VDD VSS WL2 x05 out_W_lsb_x05 WL_W2) And_bitcell
+I245 (BL_W2 BLB_W2 VDD VSS WL2 x06 out_W_lsb_x06 WL_W2) And_bitcell
+I244 (BL_W1 BLB_W1 VDD VSS WL1 x04 out_W_lsb_x04 WL_W1) And_bitcell
+I243 (BL_W1 BLB_W1 VDD VSS WL1 x05 out_W_lsb_x05 WL_W1) And_bitcell
+I242 (BL_W1 BLB_W1 VDD VSS WL1 x06 out_W_lsb_x06 WL_W1) And_bitcell
+I241 (BL_W0 BLB_W0 VDD VSS WL0 x04 out_W_lsb_x04 WL_W0) And_bitcell
+I240 (BL_W0 BLB_W0 VDD VSS WL0 x05 out_W_lsb_x05 WL_W0) And_bitcell
+I239 (BL_W0 BLB_W0 VDD VSS WL0 x06 out_W_lsb_x06 WL_W0) And_bitcell
+I221 (BL_W2 BLB_W2 VDD VSS WL2 x03 out_W_lsb_x03 WL_W2) And_bitcell
+I222 (BL_W3 BLB_W3 VDD VSS WL3 x03 out_W_lsb_x03 WL_W3) And_bitcell
+I223 (BL_W4 BLB_W4 VDD VSS WL4 x03 out_W_msb_x03 WL_W4) And_bitcell
+I224 (BL_W5 BLB_W5 VDD VSS WL5 x03 out_W_msb_x03 WL_W5) And_bitcell
+I225 (BL_W6 BLB_W6 VDD VSS WL6 x03 out_W_msb_x03 WL_W6) And_bitcell
+I226 (BL_W7 BLB_W7 VDD VSS WL7 x03 out_W_msb_x03 WL_W7) And_bitcell
+I143 (BL_W3 BLB_W3 VDD VSS WL3 x00 out_W_lsb_x00 WL_W3) And_bitcell
+I136 (BL_W7 BLB_W7 VDD VSS WL7 x00 out_W_msb_x00 WL_W7) And_bitcell
+I137 (BL_W6 BLB_W6 VDD VSS WL6 x00 out_W_msb_x00 WL_W6) And_bitcell
+I138 (BL_W4 BLB_W4 VDD VSS WL4 x00 out_W_msb_x00 WL_W4) And_bitcell
+I139 (BL_W5 BLB_W5 VDD VSS WL5 x00 out_W_msb_x00 WL_W5) And_bitcell
+I140 (BL_W2 BLB_W2 VDD VSS WL2 x00 out_W_lsb_x00 WL_W2) And_bitcell
+I141 (BL_W0 BLB_W0 VDD VSS WL0 x00 out_W_lsb_x00 WL_W0) And_bitcell
+I142 (BL_W1 BLB_W1 VDD VSS WL1 x00 out_W_lsb_x00 WL_W1) And_bitcell
+I203 (BL_W0 BLB_W0 VDD VSS WL0 x02 out_W_lsb_x02 WL_W0) And_bitcell
+I168 (BL_W7 BLB_W7 VDD VSS WL7 x01 out_W_msb_x01 WL_W7) And_bitcell
+I210 (BL_W7 BLB_W7 VDD VSS WL7 x02 out_W_msb_x02 WL_W7) And_bitcell
+I166 (BL_W5 BLB_W5 VDD VSS WL5 x01 out_W_msb_x01 WL_W5) And_bitcell
+I164 (BL_W3 BLB_W3 VDD VSS WL3 x01 out_W_lsb_x01 WL_W3) And_bitcell
+I165 (BL_W4 BLB_W4 VDD VSS WL4 x01 out_W_msb_x01 WL_W4) And_bitcell
+I167 (BL_W6 BLB_W6 VDD VSS WL6 x01 out_W_msb_x01 WL_W6) And_bitcell
+I163 (BL_W2 BLB_W2 VDD VSS WL2 x01 out_W_lsb_x01 WL_W2) And_bitcell
+I162 (BL_W1 BLB_W1 VDD VSS WL1 x01 out_W_lsb_x01 WL_W1) And_bitcell
+I161 (BL_W0 BLB_W0 VDD VSS WL0 x01 out_W_lsb_x01 WL_W0) And_bitcell
+I229 (BL_W6 BLB_W6 VDD VSS WL6 x07 out_W_msb_x07 WL_W6) And_bitcell
+I228 (BL_W7 BLB_W7 VDD VSS WL7 x07 out_W_msb_x07 WL_W7) And_bitcell
+I230 (BL_W4 BLB_W4 VDD VSS WL4 x07 out_W_msb_x07 WL_W4) And_bitcell
+I219 (BL_W0 BLB_W0 VDD VSS WL0 x03 out_W_lsb_x03 WL_W0) And_bitcell
+I231 (BL_W3 BLB_W3 VDD VSS WL3 x07 out_W_lsb_x07 WL_W3) And_bitcell
+I232 (BL_W2 BLB_W2 VDD VSS WL2 x07 out_W_lsb_x07 WL_W2) And_bitcell
+I233 (BL_W1 BLB_W1 VDD VSS WL1 x07 out_W_lsb_x07 WL_W1) And_bitcell
+I234 (BL_W0 BLB_W0 VDD VSS WL0 x07 out_W_lsb_x07 WL_W0) And_bitcell
+I205 (BL_W2 BLB_W2 VDD VSS WL2 x02 out_W_lsb_x02 WL_W2) And_bitcell
+I227 (BL_W5 BLB_W5 VDD VSS WL5 x07 out_W_msb_x07 WL_W5) And_bitcell
+I204 (BL_W1 BLB_W1 VDD VSS WL1 x02 out_W_lsb_x02 WL_W1) And_bitcell
+I206 (BL_W3 BLB_W3 VDD VSS WL3 x02 out_W_lsb_x02 WL_W3) And_bitcell
+I207 (BL_W4 BLB_W4 VDD VSS WL4 x02 out_W_msb_x02 WL_W4) And_bitcell
+I208 (BL_W5 BLB_W5 VDD VSS WL5 x02 out_W_msb_x02 WL_W5) And_bitcell
+I209 (BL_W6 BLB_W6 VDD VSS WL6 x02 out_W_msb_x02 WL_W6) And_bitcell
+I220 (BL_W1 BLB_W1 VDD VSS WL1 x03 out_W_lsb_x03 WL_W1) And_bitcell
+V20 (reset 0) vsource type=pulse val0=0 val1=1 period=1 width=1.7n
+V19 (clk 0) vsource type=pulse val0=0 val1=1 period=1n width=500.0p
+V88 (BL_W5_input 0) vsource dc=0 type=pulse val0=0 val1=1 period=1 \
+        width=4n
+V74 (VDD1 0) vsource dc=1 type=dc
+V73 (vtail 0) vsource dc=vtail type=dc
+V81 (BL_W2_input 0) vsource dc=1 type=dc
+V77 (BL_W0_input 0) vsource dc=1 type=dc
+V78 (BL_W1_input 0) vsource dc=1 type=dc
+V46 (BL_W6 0) vsource dc=vdd_level_input*(bl_w6) type=dc
+V62 (BLB_W2 0) vsource dc=vdd_level_input*(1-bl_w2) type=dc
+V64 (BLB_W1 0) vsource dc=vdd_level_input*(1-bl_w1) type=dc
+V47 (BL_W7 0) vsource dc=vdd_level_input*(bl_w7) type=dc
+V65 (BLB_W0 0) vsource dc=vdd_level_input*(1-bl_w0) type=dc
+V60 (BLB_W7 0) vsource dc=vdd_level_input*(1-bl_w7) type=dc
+V58 (BLB_W4 0) vsource dc=vdd_level_input*(1-bl_w4) type=dc
+V59 (BLB_W5 0) vsource dc=vdd_level_input*(1-bl_w5) type=dc
+V91 (net88 0) vsource dc=1 type=dc
+V95 (net1 VSS) vsource dc=600m type=dc
+V18 (load_weights 0) vsource dc=0 type=dc
+V17 (X7_input 0) vsource dc=vdd_level_input*(X7) type=dc
+V89 (X6_input 0) vsource dc=vdd_level_input*(X6) type=dc
+V15 (X5_input 0) vsource dc=vdd_level_input*(X5) type=dc
+V14 (X4_input 0) vsource dc=vdd_level_input*(X4) type=dc
+V13 (X3_input 0) vsource dc=vdd_level_input*(X3) type=dc
+V12 (X2_input 0) vsource dc=vdd_level_input*(X2) type=dc
+V11 (X1_input 0) vsource dc=vdd_level_input*(X1) type=dc
+V10 (X0_input 0) vsource dc=vdd_level_input*(X0) type=dc
+V9 (BL_W7_input 0) vsource dc=1 type=dc
+V8 (BL_W6_input 0) vsource dc=1 type=dc
+V83 (BL_W4_input 0) vsource dc=1 type=dc
+V82 (BL_W3_input 0) vsource dc=1 type=dc
+V61 (BLB_W6 0) vsource dc=vdd_level_input*(1-bl_w6) type=dc
+V90 (net83 0) vsource dc=1 type=dc
+V45 (BL_W2 0) vsource dc=vdd_level_input*(bl_w2) type=dc
+V42 (BL_W1 0) vsource dc=vdd_level_input*(bl_w1) type=dc
+V37 (BL_W0 0) vsource dc=vdd_level_input*(bl_w0) type=dc
+V49 (BL_W4 0) vsource dc=vdd_level_input*(bl_w4) type=dc
+V48 (BL_W5 0) vsource dc=vdd_level_input*(bl_w5) type=dc
+V23 (VSS 0) vsource dc=0 type=dc
+V22 (VDD 0) vsource dc=vdd type=dc
+V63 (BLB_W3 0) vsource dc=vdd_level_input*(1-bl_w3) type=dc
+V44 (BL_W3 0) vsource dc=vdd_level_input*(bl_w3) type=dc
+M26 (out_W_msb_x04 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m \
+        multi=1 nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M25 (out_W_msb_x01 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m \
+        multi=1 nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M24 (out_W_msb_x02 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m \
+        multi=1 nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M23 (out_W_msb_x03 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m \
+        multi=1 nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M22 (out_W_msb_x05 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m \
+        multi=1 nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M21 (out_W_msb_x06 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m \
+        multi=1 nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M20 (out_W_msb_x07 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m \
+        multi=1 nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M19 (out_W_msb_x00 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m \
+        multi=1 nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M10 (out_W_lsb_x07 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m \
+        multi=1 nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M9 (out_W_lsb_x06 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m multi=1 \
+        nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M8 (out_W_lsb_x05 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m multi=1 \
+        nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M6 (out_W_lsb_x03 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m multi=1 \
+        nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M5 (out_W_lsb_x02 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m multi=1 \
+        nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M4 (out_W_lsb_x01 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m multi=1 \
+        nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M7 (out_W_lsb_x04 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m multi=1 \
+        nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+M0 (out_W_lsb_x00 precharge 0 0) nch_mac l=30n w=1e-07*precharge_m multi=1 \
+        nf=precharge_m sd=100n \
+        ad=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*((precharge_m/2)*1e-07))*1e-07 \
+        as=((precharge_m-int(precharge_m/2)*2)*(7.5e-08+((precharge_m-1)*1e-07)/2+0)+(precharge_m+1-int((precharge_m+1)/2)*2)*(7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0))*1e-07 \
+        pd=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*(((precharge_m/2)*1e-07)*2+precharge_m*1e-07) \
+        ps=(precharge_m-int(precharge_m/2)*2)*((7.5e-08+((precharge_m-1)*1e-07)/2+0)*2+(precharge_m+1)*1e-07)+(precharge_m+1-int((precharge_m+1)/2)*2)*((7.5e-08+7.5e-08+(precharge_m/2-1)*1e-07+0+0)*2+(precharge_m+2)*1e-07) \
+        sa=75n sb=75n sa1=75n sa2=75n sa3=75n sa4=75n sb1=75n sb2=75n \
+        sb3=75n spa=100n spa1=100n spa2=100n spa3=100n sap=91.9776n \
+        sapb=114.444n spba=115.715168n spba1=117.042727n dfm_flag=0 \
+        spmt=1.11111e+15 spomt=0 spomt1=1.11111e+60 spmb=1.11111e+15 \
+        spomb=0 spomb1=1.11111e+60
+C83 (net20 VSS) capacitor c=55f
+C82 (net20 net21) capacitor c=4f
+C81 (net20 net64) capacitor c=64f
+C80 (net20 net63) capacitor c=4f
+C79 (net20 net62) capacitor c=1f
+C101 (s_out_W_lsb_x06_accumulation 0) capacitor c=20f ic=init_cond
+C98 (s_out_W_lsb_x02_accumulation 0) capacitor c=20f ic=init_cond
+C100 (s_out_W_lsb_x05_accumulation 0) capacitor c=20f ic=init_cond
+C99 (s_out_W_lsb_x04_accumulation 0) capacitor c=20f ic=init_cond
+C60 (s_out_W_lsb_x04 0) capacitor c=1p ic=init_cond
+C47 (out_W_msb_x02 0) capacitor c=1p ic=init_cond
+C46 (out_W_msb_x01 0) capacitor c=1p ic=init_cond
+C55 (out_W_lsb_x02 0) capacitor c=1p ic=init_cond
+C49 (s_out_W_lsb_x00 0) capacitor c=1p ic=init_cond
+C45 (out_W_msb_x00 0) capacitor c=3p ic=init_cond
+C41 (s_out_W_msb_x00 0) capacitor c=1p ic=init_cond
+C40 (s_out_W_msb_x01 s_out_W_msb_x00_accumulation) capacitor c=1p \
+        ic=init_cond
+C39 (s_out_W_msb_x02 s_out_W_msb_x01_accumulation) capacitor c=1p \
+        ic=init_cond
+C38 (s_out_W_msb_x03 s_out_W_msb_x02_accumulation) capacitor c=1p \
+        ic=init_cond
+C33 (s_out_W_lsb_x07 s_out_W_lsb_x06_accumulation) capacitor c=1p \
+        ic=init_cond
+C59 (out_W_lsb_x05 0) capacitor c=1p ic=init_cond
+C58 (s_out_W_lsb_x05 s_out_W_lsb_x04_accumulation) capacitor c=1p \
+        ic=init_cond
+C57 (s_out_W_lsb_x06 s_out_W_lsb_x05_accumulation) capacitor c=1p \
+        ic=init_cond
+C34 (s_out_W_msb_x07 s_out_W_msb_x06_accumulation) capacitor c=1p \
+        ic=init_cond
+C65 (out_W_msb_x05 0) capacitor c=1p ic=init_cond
+C66 (s_out_W_msb_x05 s_out_W_msb_x04_accumulation) capacitor c=1p \
+        ic=init_cond
+C68 (out_W_msb_x06 0) capacitor c=1p ic=init_cond
+C67 (s_out_W_msb_x06 s_out_W_msb_x05_accumulation) capacitor c=1p \
+        ic=init_cond
+C97 (s_out_W_lsb_x01_accumulation 0) capacitor c=20f ic=init_cond
+C96 (s_out_W_lsb_x00_accumulation 0) capacitor c=20f ic=init_cond
+C95 (s_out_W_msb_x00_accumulation 0) capacitor c=20f ic=init_cond
+C92 (s_out_W_msb_x06_accumulation 0) capacitor c=20f ic=init_cond
+C91 (s_out_W_msb_x05_accumulation 0) capacitor c=20f ic=init_cond
+C90 (s_out_W_msb_x04_accumulation 0) capacitor c=20f ic=init_cond
+C94 (s_out_W_msb_x01_accumulation 0) capacitor c=20f ic=init_cond
+C93 (s_out_W_msb_x02_accumulation 0) capacitor c=20f ic=init_cond
+C53 (out_W_lsb_x01 0) capacitor c=1p ic=init_cond
+C63 (s_out_W_msb_x04 0) capacitor c=1p ic=init_cond
+C64 (out_W_msb_x04 0) capacitor c=3p ic=init_cond
+C62 (out_W_lsb_x04 0) capacitor c=3p ic=init_cond
+C54 (s_out_W_lsb_x02 s_out_W_lsb_x01_accumulation) capacitor c=1p \
+        ic=init_cond
+C52 (s_out_W_lsb_x01 s_out_W_lsb_x00_accumulation) capacitor c=1p \
+        ic=init_cond
+C29 (s_out_W_lsb_x03 s_out_W_lsb_x02_accumulation) capacitor c=1p \
+        ic=init_cond
+C61 (out_W_lsb_x00 0) capacitor c=3p ic=init_cond
+C56 (out_W_lsb_x06 0) capacitor c=1p ic=init_cond
+I510 (clk_by2 VDD1 net87 VDD1 VSS) XOR2D0BWP30P140LVT
+I490 (control control_bar 0 s_out_W_lsb_x07_final) switch mul_switch=10
+I480 (control_2 control_bar_2 0 net21) switch mul_switch=10
+I478 (control_2 control_bar_2 0 net64) switch mul_switch=10
+I475 (control_2 control_bar_2 0 net63) switch mul_switch=10
+I474 (control_2 control_bar_2 0 net62) switch mul_switch=10
+I451 (control_delayed control_bar_delayed s_out_W_lsb_x07 \
+        s_out_W_lsb_x07_final) switch mul_switch=10
+I450 (control_delayed control_bar_delayed s_out_W_msb_x03 \
+        s_out_W_msb_x03_final) switch mul_switch=10
+I437 (control13 control_bar13 0 s_out_W_lsb_x06_accumulation) switch \
+        mul_switch=5
+I436 (control13 control_bar13 0 s_out_W_lsb_x05_accumulation) switch \
+        mul_switch=5
+I435 (control13 control_bar13 0 s_out_W_lsb_x04_accumulation) switch \
+        mul_switch=5
+I434 (control12 control_bar12 0 s_out_W_lsb_x02_accumulation) switch \
+        mul_switch=5
+I433 (control12 control_bar12 0 s_out_W_lsb_x01_accumulation) switch \
+        mul_switch=5
+I432 (control12 control_bar12 0 s_out_W_lsb_x00_accumulation) switch \
+        mul_switch=5
+I431 (control14 control_bar14 0 s_out_W_msb_x06_accumulation) switch \
+        mul_switch=5
+I430 (control14 control_bar14 0 s_out_W_msb_x05_accumulation) switch \
+        mul_switch=5
+I428 (control11 control_bar11 0 s_out_W_msb_x02_accumulation) switch \
+        mul_switch=5
+I427 (control11 control_bar11 0 s_out_W_msb_x01_accumulation) switch \
+        mul_switch=5
+I426 (control11 control_bar11 0 s_out_W_msb_x00_accumulation) switch \
+        mul_switch=5
+I420 (control_delayed control_bar_delayed s_out_W_lsb_x03 \
+        s_out_W_lsb_x03_final) switch mul_switch=10
+I419 (control_delayed control_bar_delayed s_out_W_msb_x07 \
+        s_out_W_msb_x07_final) switch mul_switch=10
+I412 (control_bar14 control14 s_out_W_msb_x06 \
+        s_out_W_msb_x06_accumulation) switch mul_switch=10
+I392 (control_bar12 control12 s_out_W_lsb_x00 \
+        s_out_W_lsb_x00_accumulation) switch mul_switch=10
+I411 (control14 control_bar14 out_W_msb_x06 s_out_W_msb_x06) switch \
+        mul_switch=10
+I389 (control11 control_bar11 out_W_msb_x00 s_out_W_msb_x00) switch \
+        mul_switch=10
+I402 (control_bar13 control13 s_out_W_lsb_x06 \
+        s_out_W_lsb_x06_accumulation) switch mul_switch=10
+I406 (control_bar13 control13 s_out_W_lsb_x04 \
+        s_out_W_lsb_x04_accumulation) switch mul_switch=10
+I373 (control_bar11 control11 s_out_W_msb_x02 \
+        s_out_W_msb_x02_accumulation) switch mul_switch=10
+I372 (control_bar11 control11 s_out_W_msb_x01 \
+        s_out_W_msb_x01_accumulation) switch mul_switch=10
+I405 (control13 control_bar13 out_W_lsb_x04 s_out_W_lsb_x04) switch \
+        mul_switch=10
+I368 (control_bar11 control11 s_out_W_msb_x00 \
+        s_out_W_msb_x00_accumulation) switch mul_switch=10
+I391 (control12 control_bar12 out_W_lsb_x00 s_out_W_lsb_x00) switch \
+        mul_switch=10
+I349 (control11 control_bar11 out_W_msb_x01 s_out_W_msb_x01) switch \
+        mul_switch=10
+I348 (control11 control_bar11 out_W_msb_x02 s_out_W_msb_x02) switch \
+        mul_switch=10
+I347 (control11 control_bar11 out_W_msb_x03 s_out_W_msb_x03) switch \
+        mul_switch=10
+I342 (control13 control_bar13 out_W_lsb_x07 s_out_W_lsb_x07) switch \
+        mul_switch=10
+I503 (control_2 control_bar_2 0 net20) switch mul_switch=10
+I408 (control_bar14 control14 s_out_W_msb_x04 \
+        s_out_W_msb_x04_accumulation) switch mul_switch=10
+I404 (control_bar13 control13 s_out_W_lsb_x05 \
+        s_out_W_lsb_x05_accumulation) switch mul_switch=10
+I403 (control13 control_bar13 out_W_lsb_x05 s_out_W_lsb_x05) switch \
+        mul_switch=10
+I343 (control14 control_bar14 out_W_msb_x07 s_out_W_msb_x07) switch \
+        mul_switch=10
+I410 (control_bar14 control14 s_out_W_msb_x05 \
+        s_out_W_msb_x05_accumulation) switch mul_switch=10
+I409 (control14 control_bar14 out_W_msb_x05 s_out_W_msb_x05) switch \
+        mul_switch=10
+I663 (control14 control_bar14 0 s_out_W_msb_x04_accumulation) switch \
+        mul_switch=5
+I397 (control12 control_bar12 out_W_lsb_x01 s_out_W_lsb_x01) switch \
+        mul_switch=10
+I399 (control_bar12 control12 s_out_W_lsb_x02 \
+        s_out_W_lsb_x02_accumulation) switch mul_switch=10
+I407 (control14 control_bar14 out_W_msb_x04 s_out_W_msb_x04) switch \
+        mul_switch=10
+I400 (control12 control_bar12 out_W_lsb_x02 s_out_W_lsb_x02) switch \
+        mul_switch=10
+I401 (control13 control_bar13 out_W_lsb_x06 s_out_W_lsb_x06) switch \
+        mul_switch=10
+I493 (control control_bar 0 s_out_W_msb_x07_final) switch mul_switch=10
+I492 (control control_bar 0 s_out_W_msb_x03_final) switch mul_switch=10
+I491 (control control_bar 0 s_out_W_lsb_x03_final) switch mul_switch=10
+I398 (control_bar12 control12 s_out_W_lsb_x01 \
+        s_out_W_lsb_x01_accumulation) switch mul_switch=10
+I338 (control12 control_bar12 out_W_lsb_x03 s_out_W_lsb_x03) switch \
+        mul_switch=10
+I509 (net87 clk clk_by2 net90 VDD1 VSS) DFD1BWP30P140LVT
+I581 (control net22 VDD1 VSS) CKBD1BWP30P140LVT
+I592 (control_bar net33 VDD1 VSS) CKBD1BWP30P140LVT
+I572 (net17 net19 VDD1 VSS) CKBD1BWP30P140LVT
+I559 (net6 net3 VDD1 VSS) CKBD1BWP30P140LVT
+I571 (net19 net9 VDD1 VSS) CKBD1BWP30P140LVT
+I570 (net16 net18 VDD1 VSS) CKBD1BWP30P140LVT
+I569 (net18 net13 VDD1 VSS) CKBD1BWP30P140LVT
+I568 (net14 net16 VDD1 VSS) CKBD1BWP30P140LVT
+I567 (net7 net14 VDD1 VSS) CKBD1BWP30P140LVT
+I587 (control_bar net23 VDD1 VSS) CKBD1BWP30P140LVT
+I586 (net24 control_bar_2 VDD1 VSS) CKBD1BWP30P140LVT
+I585 (net25 net24 VDD1 VSS) CKBD1BWP30P140LVT
+I566 (clk_by2 net15 VDD1 VSS) CKBD1BWP30P140LVT
+I565 (net15 net7 VDD1 VSS) CKBD1BWP30P140LVT
+I564 (net8 net17 VDD1 VSS) CKBD1BWP30P140LVT
+I563 (net13 net8 VDD1 VSS) CKBD1BWP30P140LVT
+I584 (net23 net25 VDD1 VSS) CKBD1BWP30P140LVT
+I557 (net12 net11 VDD1 VSS) CKBD1BWP30P140LVT
+I638 (net34 control11 VDD1 VSS) CKBD1BWP30P140LVT
+I637 (control net34 VDD1 VSS) CKBD1BWP30P140LVT
+I623 (net34 control12 VDD1 VSS) CKBD1BWP30P140LVT
+I603 (net33 control_bar11 VDD1 VSS) CKBD1BWP30P140LVT
+I602 (net33 control_bar12 VDD1 VSS) CKBD1BWP30P140LVT
+I601 (net33 control_bar14 VDD1 VSS) CKBD1BWP30P140LVT
+I600 (net33 control_bar13 VDD1 VSS) CKBD1BWP30P140LVT
+I622 (net34 control14 VDD1 VSS) CKBD1BWP30P140LVT
+I621 (net34 control13 VDD1 VSS) CKBD1BWP30P140LVT
+I561 (net5 net6 VDD1 VSS) CKBD1BWP30P140LVT
+I560 (net9 net5 VDD1 VSS) CKBD1BWP30P140LVT
+drc_buf_sp1989 (net11 net10 VDD1 VSS) CKBD1BWP30P140LVT
+I558 (net3 net12 VDD1 VSS) CKBD1BWP30P140LVT
+I580 (net22 net27 VDD1 VSS) CKBD1BWP30P140LVT
+I582 (net27 net26 VDD1 VSS) CKBD1BWP30P140LVT
+I583 (net26 control_2 VDD1 VSS) CKBD1BWP30P140LVT
+I468 (OUTPUT_7 OUTPUT_6 OUTPUT_5 OUTPUT_4 OUTPUT_3 OUTPUT_2 OUTPUT_1 \
+        OUTPUT_0 VDD1 VSS net83 net10 ADC_reset net4 net88) \
+        SAR_adc_innovation
+I665 (clk load_weights reset BL_W0_input BL_W1_input BL_W2_input \
+        BL_W3_input BL_W4_input BL_W5_input BL_W6_input BL_W7_input \
+        X0_input X1_input X2_input X3_input X4_input X5_input X6_input \
+        X7_input WL0 WL1 WL2 WL3 WL4 WL5 WL6 WL7 WL_W0 WL_W1 WL_W2 WL_W3 \
+        WL_W4 WL_W5 WL_W6 WL_W7 x00 x01 x02 x03 x04 x05 x06 x07 BL_W0 \
+        BL_W1 BL_W2 BL_W3 BL_W4 BL_W5 BL_W6 BL_W7 BLB_W0 BLB_W1 BLB_W2 \
+        BLB_W3 BLB_W4 BLB_W5 BLB_W6 BLB_W7 precharge control control_bar \
+        control_delayed control_bar_delayed ADC_reset VDD1 VSS) \
+        Overall_control_ckt
+I577 (VDD1 VSS net21 s_out_W_lsb_x07_final vtail) testing
+I485 (VDD1 VSS net64 s_out_W_msb_x07_final vtail) testing
+I579 (VDD1 VSS net62 s_out_W_lsb_x03_final vtail) testing
+I578 (VDD1 VSS net63 s_out_W_msb_x03_final vtail) testing
+I518 (VDD1 0 net4 net1 net20 vtail) testing_testbench
