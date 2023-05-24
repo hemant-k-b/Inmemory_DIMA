@@ -1,0 +1,23 @@
+// VerilogA for And_Sram, noise, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module noise_gen(vout,clk);
+output vout;
+input clk;
+electrical vout,clk;
+real temp;
+parameter seed =1, vth =0.5, variance =1e-3;
+
+analog begin
+
+@(cross(V(clk)-vth,1))
+begin
+	temp = $rdist_normal(seed,0,variance);
+end	
+
+V(vout) <+ temp;
+end
+
+endmodule
